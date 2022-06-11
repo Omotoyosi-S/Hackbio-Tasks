@@ -30,8 +30,8 @@ fastqc ACBarrie_R2.fastq.gz -o output/
 fastqc Alsen_R1.fastq.gz -o output/
 fastqc Alsen_R2.fastq.gz -o output/
 
-#Implementing fastp
-nano trim.sh
+#Trimming adapter sequences using fastp
+wget https://github.com/Omotoyosi-S/Hackbio-Tasks/blob/main/trim.sh
 bash trim.sh
 ls
 mv qc_reads/ trimmedreads
