@@ -24,7 +24,7 @@ wget https://github.com/josoga2/yt-dataset/blob/main/dataset/raw_reads/Alsen_R2.
 #creating ouput folder
 mkdir output
 
-#Implementing fastqc
+#Performing quality control checks on the raw sequences using fastqc
 fastqc ACBarrie_R1.fastq.gz -o output/
 fastqc ACBarrie_R2.fastq.gz -o output/
 fastqc Alsen_R1.fastq.gz -o output/
