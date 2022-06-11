@@ -31,7 +31,7 @@ fastqc Alsen_R1.fastq.gz -o output/
 fastqc Alsen_R2.fastq.gz -o output/
 
 #Trimming adapter sequences using fastp
-wget https://github.com/Omotoyosi-S/Hackbio-Tasks/blob/main/trim.sh
+wget https://raw.githubusercontent.com/Omotoyosi-S/Hackbio-Tasks/main/trim.sh
 bash trim.sh
 ls
 mv qc_reads/ trimmedreads
