@@ -17,3 +17,5 @@ conda install -c bioconda fastqc multiqc --yes
 mkdir -p Fastqc_Reports
 
 #Performing quality control on reads using fastqc
+nano list.txt
+bash list.txt
