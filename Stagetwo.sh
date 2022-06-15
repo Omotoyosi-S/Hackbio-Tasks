@@ -9,3 +9,11 @@ wget https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r2_chr5_12_17.fastq
 
 #Downloading reference sequence
 wget https://zenodo.org/record/2582555/files/hg19.chr5_12_17.fa.gz
+
+#Bioconda, Fastqc and multiqc installation
+conda install -c bioconda fastqc multiqc --yes
+
+#Creating fastqc report directory
+mkdir -p Fastqc_Reports
+
+#Performing quality control on reads using fastqc
