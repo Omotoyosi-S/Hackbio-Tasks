@@ -19,3 +19,7 @@ mkdir -p Fastqc_Reports
 #Performing quality control on reads using fastqc
 nano list.txt
 bash list.txt
+
+#Trimming fastq data using trimmomatic
+conda install -c bioconda trimmomatic --yes
+
