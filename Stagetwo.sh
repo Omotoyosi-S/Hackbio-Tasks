@@ -27,7 +27,6 @@ conda install -c bioconda trimmomatic --yes
 mkdir trimmed_reads && cd trimmed_reads
 mkdir -p Fastqc_results
 cd ..
-cd ..
 nano listtrim.txt
 cat
 nano trimmomatic.sh
