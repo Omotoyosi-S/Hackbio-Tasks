@@ -1,12 +1,4 @@
-#usr/bin/bash
-SAMPLES=(
-  "SLGFSK-N_231335_r1_chr5_12_17"
-  "SLGFSK-N_231335_r2_chr5_12_17"
-  "SLGFSK-T_231336_r1_chr5_12_17"
-  "SLGFSK-T_231336_r2_chr5_12_17"
-)
-
-for SAMPLE in "${SAMPLES[@]}"; do
-
-  fastqc ${SAMPLE}.fastq.gz -o Fastqc_Reports
-done
+SLGFSK-N_231335_r1_chr5_12_17
+SLGFSK-N_231335_r2_chr5_12_17
+SLGFSK-T_231336_r1_chr5_12_17
+SLGFSK-T_231336_r2_chr5_12_17
