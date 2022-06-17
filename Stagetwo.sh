@@ -10,6 +10,9 @@ wget https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r2_chr5_12_17.fastq
 #Downloading reference sequence
 wget https://zenodo.org/record/2582555/files/hg19.chr5_12_17.fa.gz
 
+#Unzipping reference sequence 
+gunzip hg19.chr5_12_17.fa.gz
+
 #Bioconda, Fastqc and multiqc installation
 conda install -c bioconda fastqc multiqc --yes
 
@@ -31,3 +34,13 @@ nano listtrim.txt
 cat
 nano trimmomatic.sh
 bash trimmomatic.sh
+
+#Installation of mapping tools 
+conda install -y -c bioconda bwa
+conda install -c bioconda samtools
+conda install -c bioconda bamtools
+
+#Indexing reference file 
+mkdir ref 
+mv hg19.chr5_12_17.fa.gz ref
+bwa index hg19.chr5_12_17.fa 
