@@ -44,3 +44,9 @@ conda install -c bioconda bamtools
 mkdir ref 
 mv hg19.chr5_12_17.fa.gz ref
 bwa index hg19.chr5_12_17.fa 
+
+#Performing alignment 
+mkdir Mapping
+bwa mem -R '@RG\tID:231335\tSM:Normal' /home/einstein/crick/Saba/raw_data/ref/hg19.chr5_12_17.fa /home/einstein/crick/Saba/raw_data/trimmed_reads/SLGFSK-N_231335_r1_paired.fq.gz \
+      /home/einstein/crick/Saba/raw_data/trimmed_reads/SLGFSK-N_231335_r2_paired.fq.gz > Mapping/SLGFSK-N_231335.sam
+
