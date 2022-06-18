@@ -52,5 +52,9 @@ bwa mem -R '@RG\tID:231335\tSM:Normal' /home/einstein/crick/Saba/raw_data/ref/hg
 bwa mem -R '@RG\tID:231336\tSM:Tumor' /home/einstein/crick/Saba/raw_data/ref/hg19.chr5_12_17.fa /home/einstein/crick/Saba/raw_data/trimmed_reads/SLGFSK-T_231336_r1_paired.fq.gz \
        /home/einstein/crick/Saba/raw_data/trimmed_reads/SLGFSK-T_231336_r2_paired.fq.gz > Mapping/SLGFSK-T_231336.sam	
        
+#Conversion of sam file to bam file
+nano mappinglist.txt
+nano convert.sh
+       
        
 
