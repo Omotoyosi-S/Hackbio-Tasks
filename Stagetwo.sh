@@ -55,6 +55,22 @@ bwa mem -R '@RG\tID:231336\tSM:Tumor' /home/einstein/crick/Saba/raw_data/ref/hg1
 #Conversion of sam file to bam file
 nano mappinglist.txt
 nano convert.sh
+bash convert.sh
+
+#Filtering BAM files
+nano filterbam.sh
+bash filterbam.sh
+cd Mapping
+ls
+
+#viewing output
+/crick/Saba/raw_data/ref/Mapping$ samtools flagstat SLGFSK-N_231335.sorted.bam
+/crick/Saba/raw_data/ref/Mapping$ samtools flagstat SLGFSK-T_231336.sorted.bam
+
+#Performing duplicate removal
+samtools rmdup SLGFSK-N_231335.sorted.bam  SLGFSK-N_231335.rdup and samtools rmdup SLGFSK-T_231336.bam  SLGFSK-T_231336.rdup
+
+
        
        
 
