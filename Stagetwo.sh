@@ -95,3 +95,19 @@ bash convert2pileup.sh
 
 #Cell Variants
 java -jar /home/einstein/sample_tut/VarScan.v2.3.9.jar somatic Variants/SLGFSK-N_231335.pileup         Variants/SLGFSK-T_231336.pileup Variants/SLGFSK         --normal-purity 1  --tumor-purity 0.5 --output-vcf 1
+
+#Merge vcf
+bgzip Variants/SLGFSK.snp.vcf > Variants/SLGFSK.snp.vcf.gz
+bgzip Variants/SLGFSK.indel.vcf > Variants/SLGFSK.indel.vcf.gz
+tabix Variants/SLGFSK.snp.vcf.gz
+tabix Variants/SLGFSK.indel.vcf.gz
+bcftools merge Variants/SLGFSK.snp.vcf.gz Variants/SLGFSK.indel.vcf.gz > Variants/SLGFSK.vcf
+
+# Variant Annotation
+#download jar file
+wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+
+# Unzip file
+unzip snpEff_latest_core.zip
+
+
