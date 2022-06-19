@@ -68,8 +68,17 @@ ls
 /crick/Saba/raw_data/ref/Mapping$ samtools flagstat SLGFSK-T_231336.sorted.bam
 
 #Performing duplicate removal
-samtools rmdup SLGFSK-N_231335.sorted.bam  SLGFSK-N_231335.rdup and samtools rmdup SLGFSK-T_231336.bam  SLGFSK-T_231336.rdup
+samtools rmdup SLGFSK-N_231335.sorted.bam  SLGFSK-N_231335.rdup 
+samtools rmdup SLGFSK-T_231336.sorted.bam  SLGFSK-T_231336.rdup
 
+#Left align
+nano leftalign.sh
+bash leftalign.sh
+ls Mapping
+
+#Recalibrating
+nano recalibrate.sh
+bash recalibrate.sh
 
        
        
