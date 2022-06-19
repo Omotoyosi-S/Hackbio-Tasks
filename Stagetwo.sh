@@ -80,6 +80,14 @@ ls Mapping
 nano recalibrate.sh
 bash recalibrate.sh
 
-       
-       
+#refilter read mapping qualities
+cd Mapping
+/crick/Saba/raw_data/ref/Mapping$ bamtools filter -in SLGFSK-T_231336.recalibrate.bam -mapQuality "<=254" > SLGFSK-T_231336.refilter.bam
+/crick/Saba/raw_data/ref/Mapping$ bamtools filter -in SLGFSK-N_231335.recalibrate.bam -mapQuality "<=254" > SLGFSK-N_231335.refilter.bam      
+cd ..
 
+#Variant calling and classification
+mkdir Variants
+
+#command for converting data to pileup
+nano convert
