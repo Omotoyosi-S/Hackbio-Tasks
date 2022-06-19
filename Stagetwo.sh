@@ -90,4 +90,8 @@ cd ..
 mkdir Variants
 
 #command for converting data to pileup
-nano convert
+nano convert2pileup.sh
+bash convert2pileup.sh
+
+#Cell Variants
+java -jar /home/einstein/sample_tut/VarScan.v2.3.9.jar somatic Variants/SLGFSK-N_231335.pileup         Variants/SLGFSK-T_231336.pileup Variants/SLGFSK         --normal-purity 1  --tumor-purity 0.5 --output-vcf 1
