@@ -110,4 +110,11 @@ wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
 # Unzip file
 unzip snpEff_latest_core.zip
 
+#Download snpEff database
+java -jar snpEff.jar download hg19		
+
+#Annotate the Variants 
+
+
+
 
