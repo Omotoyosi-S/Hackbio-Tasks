@@ -113,7 +113,16 @@ unzip snpEff_latest_core.zip
 #Download snpEff database
 java -jar snpEff.jar download hg19		
 
+#Installing wget command on my local device
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install wget
+
 #Annotate the Variants 
+wget https://raw.github.com/arq5x/gemini/master/gemini/scripts/gemini_install.py
+python gemini_install.py /usr/local /usr/local/share/gemini
+gemini load -v Variants/SLGFSK.ann.vcf -t snpEff Annotation/gemini.db
+
+
 
 
 
