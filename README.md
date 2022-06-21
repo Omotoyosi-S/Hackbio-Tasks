@@ -6,3 +6,4 @@ This stage involved learning basic bash commands like mkdir for creating new dir
 Stage one involved the usage of bash basics to solve simple bio-data problems. I performed genome sequence analysis using software like fastqc for quality control , fastp for trimming adapter sequences and multiqc for merging quality control reports. All of this was done in the miniconda environment as we were introduced to conda usage. The result of this stage is StageOne.sh
 # Stage two tasks
 In this task called "standing on the shoulder of giants", we replicate a previous workflow that identifies germline and somatic variants. Using 
+the Linux pipeline, I was able to perform qc reads on the raw data, trim adapter sequences using Trimmomatic, map sequences against the reference using BWA tools and so much more.
