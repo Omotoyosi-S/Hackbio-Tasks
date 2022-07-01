@@ -34,3 +34,15 @@ install.packages("ggplot2")
 library("ggplot2")
 
 ggplot(data=pca1, aes(V3,V4)) + geom_point()
+
+data <- read.table("/Users/omotoyosisaba/Saba/Dataset/complete_1000_genomes_sample_list_.tsv", sep = "\t", header = TRUE)
+
+head(metadata)
+
+merge_data <- merge(x= pca1,y= metadata, by.x = "V2" , by.y = "Sample.name", all = F )
+
+ggplot(data=merge_data, aes(V3,V4, color = Population.name)) + geom_point()
+ggplot(data=merge_data, aes(V3,V4, color = Population.code)) + geom_point()
+
+
+
