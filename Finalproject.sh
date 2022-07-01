@@ -44,5 +44,11 @@ merge_data <- merge(x= pca1,y= metadata, by.x = "V2" , by.y = "Sample.name", all
 ggplot(data=merge_data, aes(V3,V4, color = Population.name)) + geom_point()
 ggplot(data=merge_data, aes(V3,V4, color = Population.code)) + geom_point()
 
+#Create a LD pruned set of markers (first step)
+plink --bfile asia --indep-pairwise 50 10 0.2 --out prune1
 
+#Calculate identity by descent score on the pruned marker list
+plink --bfile asia --extract prune1.prune.in --genome --out ibs1
 
+#Cluster individuals into homogeneous groups and perform multidimensional scaling analysis 
+plink --bfile asia --read-genome ibs1.genome --cluster --ppc 1e-3 --cc --mds-plot 2 --out strat1 
