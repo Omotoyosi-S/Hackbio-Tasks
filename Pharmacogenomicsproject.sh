@@ -45,7 +45,7 @@ ggplot(data=merge_data, aes(V3,V4, color = Population.name)) + geom_point()
 ggplot(data=merge_data, aes(V3,V4, color = Population.code)) + geom_point()
 
 #Create a LD pruned set of markers (first step)
-plink --bfile asia --indep-pairwise 50 10 0.2 --out prune1
+plink --bfile asia --indep-pairwise 1000 10 0.01 --out prune1
 
 #Calculate identity by descent score on the pruned marker list
 plink --bfile asia --extract prune1.prune.in --genome --out ibs1
