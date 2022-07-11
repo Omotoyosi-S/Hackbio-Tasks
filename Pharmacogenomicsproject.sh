@@ -52,3 +52,8 @@ plink --bfile asia --extract prune1.prune.in --genome --out ibs1
 
 #Cluster individuals into homogeneous groups and perform multidimensional scaling analysis 
 plink --bfile asia --read-genome ibs1.genome --cluster --ppc 1e-3 --cc --mds-plot 2 --out strat1 
+
+
+#Visualizing MDS analysis using ggplot in R studio
+mdsdata <- read.table ("strat1.mds" , header = TRUE ) 
+ggplot(data=merged_mds, aes(C1,C2, color = Population.code)) + geom_point() + ggtitle ("Multidimensional Scaling Analysis")
